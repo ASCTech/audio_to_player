@@ -1,0 +1,214 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ * Skin Name: Blue Monday / Audio To Player
+ *
+ * Copyright (c) 2010-2011 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 4.0 (jPlayer 2.1.0)
+ * Date: 1st September 2011
+ *
+ * Author: Matt Varone
+ * Skin Version: 1.0 (jPlayer 2.1.0)
+ * Date: 19th Apr 2012
+ */
+
+/* =Player
+-------------------------------------------------------------- */
+
+div.jp-audio {
+	font-size:1em;
+	line-height:1em;
+	font-family:Verdana, Arial, sans-serif;
+	
+	width:100%;
+	max-width:480px;
+	min-width:220px;
+	position:relative;
+	
+	color: #666;
+	border: 1px solid #CFD1D3;	
+    background: #f6f6f4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f6f6f4 0%, #f0f0f0 47%, #efefef 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f4), color-stop(47%,#f0f0f0), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f6f6f4 0%,#f0f0f0 47%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f6f6f4 0%,#f0f0f0 47%,#efefef 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f6f6f4 0%,#f0f0f0 47%,#efefef 100%); /* IE10+ */
+    background: linear-gradient(top,  #f6f6f4 0%,#f0f0f0 47%,#efefef 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f4', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */ 
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.9),inset 0 -1px 0 rgba(255,255,255,0.9);
+	
+	-webkit-border-radius:0.22em;
+    -moz-border-radius:0.22em;
+    border-radius:0.22em;
+}
+
+div.jp-interface {
+	position: relative;
+	width:100%;
+}
+
+div.jp-audio div.jp-type-single div.jp-interface {
+	height:2.3em;
+}
+
+/* =Controls
+-------------------------------------------------------------- */
+
+div.jp-controls-holder {
+	clear: both;
+	width:100%;
+	margin:0 auto;
+	position: relative;
+	overflow:hidden;
+}
+
+div.jp-interface .jp-controls {
+    width: 80%;
+    margin:0;
+	overflow:hidden;
+	float:left;
+}
+
+div.jp-interface .jp-controls a {
+	float:left;
+	display:block;
+	text-indent:100%;
+}
+
+div.jp-interface .jp-controls a:hover {
+    text-decoration:none;
+}
+
+a.jp-play,
+a.jp-pause,
+a.jp-mute,
+a.jp-unmute,
+a.jp-volume-max  {
+    width:12.5%;
+    height:2.3em;
+    position:relative;
+}
+
+
+a.jp-play, a.jp-pause {
+    border-right:1px solid #ddd;
+    -webkit-box-shadow:inset -1px 0 0 rgba(255,255,255,0.7);
+    -moz-box-shadow:inset -1px 0 0 rgba(255,255,255,0.7);
+    box-shadow:inset -1px 0 0 rgba(255,255,255,0.7);
+}
+
+a.jp-mute, a.jp-unmute {
+    border-left:1px solid #ddd;
+    -webkit-box-shadow:-1px 0 0 rgba(255,255,255,0.7);
+    -moz-box-shadow:-1px 0 0 rgba(255,255,255,0.7);
+    box-shadow:-1px 0 0 rgba(255,255,255,0.7);
+}
+
+a.jp-play {
+    background:url(../img/play.png) no-repeat center center;
+}
+
+a.jp-pause {
+    background:url(../img/pause.png) no-repeat center center;
+}
+
+a.jp-mute {
+    background:url(../img/on.png) no-repeat center center;
+}
+
+a.jp-unmute {
+    background:url(../img/off.png) no-repeat center center;
+}
+
+/* =Progress Bar
+-------------------------------------------------------------- */
+
+div.jp-audio div.jp-progress {
+	position: absolute;
+	top:0.9em;
+	height:0.5em;
+}
+div.jp-audio div.jp-progress {
+	left:14.4%;
+	width:51%;
+}
+div.jp-seek-bar {
+	background:#b4b4b4;
+	width:0px;
+	height:100%;
+	cursor: pointer;
+}
+div.jp-play-bar {
+	width:0;
+	height:100%;
+}
+
+div.jp-seek-bar, div.jp-volume-bar {
+	border:1px solid #9e9e9e;
+    -webkit-box-shadow:0 1px 0 rgba(255,255,255,0.5);
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,0.5);
+    box-shadow:0 1px 0 rgba(255,255,255,0.5);
+
+}
+
+div.jp-play-bar, div.jp-seek-bar,
+div.jp-volume-bar, div.jp-volume-bar-value {
+	-webkit-border-radius:0.19em;
+    -moz-border-radius:0.19em;
+    border-radius:0.19em;
+}
+
+div.jp-volume-bar-value, div.jp-play-bar {
+    background: #FF0000; /* Old browsers */
+    background: -moz-linear-gradient(top,  #FF0000 0%, #DB2121 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FF0000), color-stop(100%,#DB2121)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #FF0000 0%,#DB2121 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #FF0000 0%,#DB2121 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #FF0000 0%,#DB2121 100%); /* IE10+ */
+    background: linear-gradient(top,  #FF0000 0%,#DB2121 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF0000', endColorstr='#DB2121',GradientType=0 ); /* IE6-9 */
+    -webkit-box-shadow:inset 0 2px 0 rgba(255,255,255,0.4);
+    -moz-box-shadow:inset 0 2px 0 rgba(255,255,255,0.4);
+    box-shadow:inset 0 2px 0 rgba(255,255,255,0.4);
+}
+
+/* =Volume
+-------------------------------------------------------------- */
+
+div.jp-audio div.jp-type-single a.jp-mute,
+div.jp-audio div.jp-type-single a.jp-unmute {
+	margin-left: 74%;	
+}
+
+.jp-volume-bar-container {
+    margin-left:0.5%;
+ 	width:15%;
+	float:left; 
+	padding-top:0.9em; 
+}
+
+div.jp-volume-bar {
+    background:#b4b4b4;
+	position: absolute;
+	overflow:hidden;
+	width:15%;
+	height:0.5em;
+	cursor: pointer;
+}
+
+div.jp-volume-bar-value {
+	width:0px;
+	height:0.5em;
+}
+
+div.jp-jplayer audio,
+div.jp-jplayer {
+	width:0px;
+	height:0px;
+}
