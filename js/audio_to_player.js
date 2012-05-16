@@ -19,8 +19,9 @@ Drupal.behaviors.audio_to_playerBehavior = function(context) {
                         mp3: player.href
                     });
                 },
+                solution:"flash,html",
                 cssSelectorAncestor: '#' + id, // element ID
-                swfPath: '/sites/all/modules/audio_to_player/js', // path to swf fallback
+                swfPath: './', // path to swf fallback
                 supplied: "mp3" // type supplied (mp3 seems to work for all)
             });
         });
