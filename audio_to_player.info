@@ -1,0 +1,9 @@
+name = Audio to Player
+description = Javascript to convert links to .np3 files to jplayer.
+core = 6.x
+package = Other
+version = 7.x-1.0-dev
+project = audio_to_player
+
+scripts[] = js/jplayer.js
+scripts[] = js/audio-to-player.js
