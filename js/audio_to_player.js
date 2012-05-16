@@ -4,7 +4,7 @@ Drupal.behaviors.audio_to_playerBehavior = function(context) {
     // Check if there's any link and jPlayer is active
     if ($audio.length > 0 && $.isFunction($.fn.jPlayer)) {
         // set the template
-        var template = '<div class="jp-audio-container"><div class="jp-audio"><div class="jp-type-single"><div class="jp-interface"><div class="jp-controls"><a href="#" class="jp-play" tabindex="1">'+js_params.in_play+'</a> <a href="#" class="jp-pause" tabindex="1">'+js_params.in_pause+'</a> <a href="#" class="jp-mute" tabindex="1">'+js_params.in_mute+'</a> <a href="#" class="jp-unmute" tabindex="1">'+js_params.in_unmute+'</a></div><div class="jp-progress-container"><div class="jp-progress"><div class="jp-seek-bar"><div class="jp-play-bar"></div></div></div></div><div class="jp-volume-bar-container"><div class="jp-volume-bar"><div class="jp-volume-bar-value"></div></div></div></div></div></div></div>',
+        var template = '<div class="jp-audio-container"><div class="jp-audio"><div class="jp-type-single"><div class="jp-interface"><div class="jp-controls"><a href="#" class="jp-play" tabindex="1"></a> <a href="#" class="jp-pause" tabindex="1"></a> <a href="#" class="jp-mute" tabindex="1"></a> <a href="#" class="jp-unmute" tabindex="1"></a></div><div class="jp-progress-container"><div class="jp-progress"><div class="jp-seek-bar"><div class="jp-play-bar"></div></div></div></div><div class="jp-volume-bar-container"><div class="jp-volume-bar"><div class="jp-volume-bar-value"></div></div></div></div></div></div></div>',
             c = 0; // player's counter
         // loop trough the audio links
         $audio.each(function (index, player) {
@@ -20,7 +20,7 @@ Drupal.behaviors.audio_to_playerBehavior = function(context) {
                     });
                 },
                 cssSelectorAncestor: '#' + id, // element ID
-                swfPath: js_params.uri + '/js', // path to swf fallback
+                swfPath: '/sites/all/modules/audio_to_player/js', // path to swf fallback
                 supplied: "mp3" // type supplied (mp3 seems to work for all)
             });
         });
