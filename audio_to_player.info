@@ -1,4 +1,4 @@
-name = Adds Yahoo! Webplayer to site.
+name = Audio to Player
 description = Javascript to convert links to .mp3 files to Yahoo! Web Player
 core = 6.x
 package = Other

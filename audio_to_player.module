@@ -2,7 +2,7 @@
 /**
  * Implementation of hook_init().
  */
-function audio_to_player_init() {
-  drupal_add_js('http://webplayer.yahooapis.com/player.js', 'external');
+function audio_to_player_footer() {
+  return '<script type="text/javascript" src="http://webplayer.yahooapis.com/player.js"></script>';
 }
 ?>
