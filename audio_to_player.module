@@ -3,9 +3,6 @@
  * Implementation of hook_init().
  */
 function audio_to_player_init() {
-  drupal_add_js(drupal_get_path('module', 'audio_to_player') . '/js/jquery.jplayer.min.js');
-  drupal_add_js(drupal_get_path('module', 'audio_to_player') . '/js/audio_to_player.js');
-  drupal_add_css(drupal_get_path('module', 'audio_to_player') . '/css/audio_to_player.css');
-
+  drupal_add_js('http://webplayer.yahooapis.com/player.js', 'external');
 }
 ?>
