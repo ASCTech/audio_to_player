@@ -2,7 +2,7 @@
 /**
  * Implementation of hook_init().
  */
-function audio_to_player_header() {
+function audio_to_player_footer() {
   $output = '<script type="text/javascript">';
   $output .= '      var YWPParams = ';
   $output .= '         {';
