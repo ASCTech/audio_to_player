@@ -2,7 +2,15 @@
 /**
  * Implementation of hook_init().
  */
-function audio_to_player_footer() {
-  return '<script type="text/javascript" src="http://webplayer.yahooapis.com/player.js"></script>';
+function audio_to_player_header() {
+  $output = '<script type="text/javascript">';
+  $output .= '      var YWPParams = ';
+  $output .= '         {';
+  $output .= '                  autoadvance: false';
+  $output .= '                       ';
+  $output .= '         };';
+  $output .= '</script>';
+  $output .= '<script type="text/javascript" src="http://webplayer.yahooapis.com/player.js"></script>';
+  return $output;
 }
 ?>
