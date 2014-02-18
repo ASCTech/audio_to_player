@@ -3,3 +3,7 @@ jQuery(document).ready(function($) {
 		$(this).replaceWith('<audio preload="auto"><source src="' + this.href + '"></audio>');
 	});
 });
+
+audiojs.events.ready(function() {
+  audiojs.createAll();
+});
