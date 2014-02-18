@@ -4,16 +4,6 @@
  */
 function audio_to_player_init() {
 	drupal_add_js(drupal_get_path('module', 'audio_to_player') . '/audiojs/audiojs/audio.min.js');
-}
-
-
-function audio_to_player_footer() {
-	
-	$output .= "jQuery(document).ready(function($) {";
-	$output .= "	$('a[href$=\".mp3\"]').each(function(index) {";
-	$output .= "		$(this).replaceWith('<audio preload=\"auto\"><source src=\"' + this.href + '\"></audio>');";
-	$output .= "	});";
-	$output .= "});";
-  return $output;
+	drupal_add_js(drupal_get_path('module', 'audio_to_player') . '/audio_to_player.js');
 }
 ?>
