@@ -2,15 +2,18 @@
 /**
  * Implementation of hook_init().
  */
+function audio_to_player_init() {
+	drupal_add_js(drupal_get_path('module', 'audio_to_player') . '/audiojs/audiojs/audio.min.js');
+}
+
+
 function audio_to_player_footer() {
-  $output = '<script type="text/javascript">';
-  $output .= '      var YWPParams = ';
-  $output .= '         {';
-  $output .= '                  autoadvance: false';
-  $output .= '                       ';
-  $output .= '         };';
-  $output .= '</script>';
-  $output .= '<script type="text/javascript" src="http://webplayer.yahooapis.com/player.js"></script>';
+	
+	$output .= "jQuery(document).ready(function($) {";
+	$output .= "	$('a[href$=\".mp3\"]').each(function(index) {";
+	$output .= "		$(this).replaceWith('<audio preload=\"auto\"><source src=\"' + this.href + '\"></audio>');";
+	$output .= "	});";
+	$output .= "});";
   return $output;
 }
 ?>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>audio.js</title>
+    <script src="./audiojs/audio.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="./includes/index.css" media="screen">
+		<script>
+			jQuery(document).ready(function($) {
+				$('a[href$=".mp3"]').each(function(index) {
+					$(this).replaceWith('<audio preload="auto"><source src="' + this.href + '"></audio>');
+				});
+			});
+		
+		</script>
+    <script>
+      audiojs.events.ready(function() {
+        audiojs.createAll();
+      });
+    </script>
+  </head>
+  <body>
+
+		<h2>Audio tag</h2>
+		<audio>
+			<source src="http://cdn02.cdn.gorillavsbear.net/wp-content/uploads/2010/11/gorilla-vs.-bear-november-2010.mp3">
+		</audio>
+		
+		<h2>Link tag</h2>
+		<a href="http://cdn02.cdn.gorillavsbear.net/wp-content/uploads/2010/11/gorilla-vs.-bear-november-2010.mp3">audio</a>
+
+  </body>
+</html>
