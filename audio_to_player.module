@@ -3,7 +3,7 @@
  * Implementation of hook_init().
  */
 function audio_to_player_init() {
-	drupal_add_js(drupal_get_path('module', 'audio_to_player') . '/audiojs/audiojs/audio.min.js');
 	drupal_add_js(drupal_get_path('module', 'audio_to_player') . '/audio_to_player.js');
+	drupal_add_js(drupal_get_path('module', 'audio_to_player') . '/audiojs/audiojs/audio.min.js');
 }
 ?>
