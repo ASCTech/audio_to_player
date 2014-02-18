@@ -1,0 +1,25 @@
+.audiojs audio{left:-1px; position:absolute;}
+.audiojs{background:-moz-linear-gradient(center top,#444444 0%,#555555 50%,#444444 51%,#444444 100%) repeat scroll 0 0 #404040; box-shadow:1px 1px 8px rgba(0,0,0,0.3); font-family:monospace; font-size:10px; height:22px; overflow:hidden; width:275px;}
+.audiojs .play-pause{border-right:1px solid #000000; float:left; height:22px; margin:0; overflow:hidden; padding:0px; width:25px;}
+.audiojs p{cursor:pointer; display:none; height:22px; margin:0; width:25px;}
+.audiojs .play{display:block;}
+.audiojs .scrubber{background:none repeat scroll 0 0 #5A5A5A; border-bottom:0 none; border-left:0 none; border-top:1px solid #3F3F3F; float:left; height:6px; margin:7px 8px 8px 8px; overflow:hidden; position:relative; width:150px;}
+.audiojs .progress{background:-moz-linear-gradient(center top,#CCCCCC 0%,#DDDDDD 50%,#CCCCCC 51%,#CCCCCC 100%) repeat scroll 0 0 #CCCCCC; height:8px; left:0; position:absolute; top:0; width:0; z-index:1;}
+.audiojs .loaded{background:-moz-linear-gradient(center top,#222222 0%,#333333 50%,#222222 51%,#222222 100%) repeat scroll 0 0 #000000; height:14px; left:0; position:absolute; top:0; width:0;}
+.audiojs .time{border-left:1px solid #000000; color:#DDDDDD; float:left; height:22px; line-height:23px; margin:0; padding:0 6px 0 6px; text-shadow:1px 1px 0 rgba(0,0,0,0.5);}
+.audiojs .time em{color:#F9F9F9; font-style:normal; padding:0 2px 0 0;}
+.audiojs .time strong{font-weight:normal; padding:0 0 0 2px;}
+.audiojs .error-message{color:#FFFFFF; display:none; float:left; height:22px; line-height:23px; margin:0 10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:275px;}
+.audiojs .error-message a{border-bottom:1px solid #999999; color:#EEEEEE; padding-bottom:1px; text-decoration:none;}
+.audiojs .play{background:url("./audiojs/audiojs/player-graphics.gif") no-repeat scroll -2px -1px rgba(0,0,0,0);}
+.audiojs .loading{background:url("./audiojs/audiojs/player-graphics.gif") no-repeat scroll -2px -33px rgba(0,0,0,0);}
+.audiojs .error{background:url("./audiojs/audiojs/player-graphics.gif") no-repeat scroll -2px -63px rgba(0,0,0,0);}
+.audiojs .pause{background:url("./audiojs/audiojs/player-graphics.gif") no-repeat scroll -2px -93px rgba(0,0,0,0);}
+.playing .play,.playing .loading,.playing .error{display:none;}
+.playing .pause{display:block;}
+.loading .play,.loading .pause,.loading .error{display:none;}
+.loading .loading{display:block;}
+.error .time,.error .play,.error .pause,.error .scrubber,.error .loading{display:none;}
+.error .error{display:block;}
+.error .play-pause p{cursor:auto;}
+.error .error-message{display:block;}
